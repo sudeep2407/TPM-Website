@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pine Mist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6a9c2ad44f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class = "container brandHeader" id = "brandHeader">
+        <div>
+            <div id = "brandName">
+                <a href = "#" ><img src="./Pics/logo.png" alt="logo"> </a>
+                <a href ="#" >The Pine Mist</a>
+            </div>
+        </div>
+        
+        <div class = "nav" id ="nav">
+            <a href ="#packages" onclick="toggleNavIcon()" >Destinations</a>
+            <a href ="#chooseUs" onclick="toggleNavIcon()" >Testimonials</a>
+            <a href ="#contactUs" onclick="toggleNavIcon()" >Contact</a>
+            <a href ="#aboutUs" onclick="toggleNavIcon()">About Us</a>
+        </div> 
+        <div class = "searchDestination" id = "searchDestination">
+            <form role="search">
+                <input id = "destinationSearch" class="form-control me-2" type="search" placeholder="Search Destination" aria-label="Search">
+                <div id = "selectOption"></div>
+            </form>
+        </div>
+        <div id = "navBar">
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavIcon()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+          
+    </div>
+    
+    <div class = "container" id="liveAlertPlaceholder"></div>
+    <div id = "carousel" class="container d-lg-flex flex-lg-row justify-content-between align-items-center flex-fill">
+        <div class="pic-ctn flex-fill">
+            <img src="./Pics/Carousel/carousel1.jpg" alt="logo">
+            <img src="./Pics/Carousel/carousel2.jpg" alt="logo">
+            <img src="./Pics/Carousel/carousel3.jpg" alt="logo">
+            <img src="./Pics/Carousel/carousel4.jpg" alt="logo">
+            <img src="./Pics/Carousel/carousel5.jpg" alt="logo">
+        </div>
+        <div id = "sideText" class="flex-fill">
+            <p id = "textHeader">
+                <span id = "heading1">Lorem ipsum, </span>
+                <span id = "heading2">dolor sit, </span>
+                <span id = "heading3">amet consectetur. </span>
+            </p>
+            <p id = "textContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quae, 
+                aliquid odit impedit, ipsa dolore doloremque quasi illo voluptates commodi 
+                praesentium doloribus odio accusantium facilis porro. Illum iusto iure vitae.</p>
+        </div>
+    </div>
+
+    <div class = "container section" id = "packages">
+        <div class = "container packageHeader">
+            <h3>Destinations</h3>
+        </div>
+        <br>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" id = "Darjeeling">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Darjeeling</h5>
+                        <p class="card-text">A colonial heritage hill city in West Bengal, better known as the Queen of the Hills, famous worldwide for its tea, Darjeeling Himalayan Railway and the magnificient view of Mt Kanchenjunga.</p>  
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#darjeelingModal">View Details</a>
+                        <p>Packages Starting from : Rs 5000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "DarjeelingOffbeat">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Darjeeling Offbeat</h5>
+                        <p class="card-text">If you are looking to stay in the midst of the nature, away from the hustle bustle of Darjeeling City, come and explore the offbeat villages near Darjeeling. Enjoy the scenic views of tea plantations, orange plantations, pine forests, flower gardens, etc.</p>
+                    </div>     
+                    <div class="card-footer bg-transparent">
+                        <a href="#" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#northSikkimModal">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "Kalimpong">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kalimpong</h5>
+                        <p class="card-text">A city in Westbengal, mainly famous for the colonial heritage. People  mainly like to explore the villages and offbeat places around this city</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="#" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = NorthSikkim>
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">North Sikkim</h5>
+                        <p class="card-text">Lachen and Lachung are the two main places in this region famous for the views of snow capped Himalayan mountains, frozen lakes and valley of flowers. This place is ideal for those seeking to chill in the snow and the adventures of rough terrains.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="#" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "SilkRoute">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Silk Route</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="#" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "Pelling">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pelling</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="#" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "PellingOffbeat">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pelling Offbeat</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="#" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "Dooars">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dooars</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="#" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "Sandakphu">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sandakphu</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#packageModal01">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "Kashmir">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kashmir</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#packageModal01">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "Ladakh">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ladakh</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#packageModal01">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id = "ShimlaManali">
+                <div class="card h-100">
+                    <img src="./Pics/Carousel/carousel2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Shimla Manali</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#packageModal01">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class = "container section" id = "chooseUs">
+        <div class = "container packageHeader">
+            <h3>Why Choose Us?</h3>
+        </div>
+        <br>
+        <div id = "facilities">
+            <div id = "cabFacility">
+                <i class="fa-solid fa-taxi"></i>
+                <h5>All types of Cabs</h5>
+                <h6>Standard, Premium, Ac, Non-AC, with experienced and friendly drivers.</h6>
+            </div>
+            <div id = "bestHotels">
+                <i class="fa-solid fa-hotel"></i>
+                <h5>Best Accomodations</h5>
+                <h6>Ranging from Premium resorts to standard hotels with best services as per your budget</h6>
+            </div>
+            <div id="bestPrice">
+                <i class="fa-solid fa-tag"></i>
+                <h5>Reasonable Pricing</h5>
+                <h6>We offer the best prices for any tour package without compromising on service quality</h6>
+            </div>
+            <div id = "support">
+                <i class="fa-solid fa-headset"></i>
+                <h5>24/7 Support</h5>
+                <h6>Our team is available at all times for any kind of assistance during your trip</h6>
+            </div>
+            <div id = "corporate">
+                <i class="fa-solid fa-briefcase"></i>
+                <h5>Corporate Events</h5>
+                <h6>We organize corporate events and business meets at any of your favourite destinations</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class = "container section" id = "testimonials">
+        <div class = "container packageHeader">
+            <h3>Testimonials</h3>
+        </div>
+        <div id ="testimonialCarousel">
+            <div id="carouselExample" class="carousel slide" > 
+                
+                <div id = "feedbackCarousel" class="carousel-inner" data-bs-ride="carousel">
+                    
+                  <!-- <div class="carousel-item active">
+                        <div class = "feedbackContent d-lg-flex flex-lg-column justify-content-between align-items-center">
+                            <div id = "feedbackTextContent" class = "flex-fill">
+                                
+                            </div>
+                            <div id = "feedbackImageContent" class = "flex-fill">
+                                
+                            </div>
+                        </div>
+                  </div> -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class = "container" id = "feedbackButtonDiv">
+            <button id ="feedbackButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#feedbackFormDiv">
+                Provide your feedback here
+            </button>
+    
+            <div class="modal fade" id="feedbackFormDiv"  tabindex="-1" aria-hidden="false">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Your Feedback</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3 needs-validation" id = "feedbackForm">
+                            
+                            <div class="col-12">
+                                <label for="guestName" class="form-label" >Your Name <span class = "requiredField">*</span></label>
+                                <input type="text" class="form-control" id="guestName"  placeholder="Your Name" required>
+                            </div>
+                            <div class="col-12" id = "ratingStars">
+                                Rating <span class = "requiredField">*</span>
+                                <div class="stars" id="stars">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="guestFeedback" class="form-label">Your Feedback <span class = "requiredField">*</span></label>
+                                <textarea class="form-control" id="guestFeedback" rows="3" placeholder="Your Feedback" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <p>Upload photos (Maximum 6 photos)</p>
+                                <input type="file" id="imageUpload" accept="image/*" multiple>
+                            </div>
+                            <div class = "col-12" id = "imageUploadPreview">
+                                
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id = "feedbackFormClose">Close</button>
+                      <button type="button" class="btn btn-warning" id = "feedbackFormSubmit">Submit</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "container section" id = "contactUs">
+        <div class = "container packageHeader">
+            <h3>Contact Us</h3>
+        </div>
+        
+        <div id = "contactDiv" class = "container d-lg-flex flex-lg-row justify-content-between align-items-center">
+            <div id = "addressDiv" class = "flex-fill">
+                <h3>The Pine Mist</h3>
+                <h6>-Your Holiday Destination</h6>
+                <p>Address:</p>
+                <p>3-B, Gitashree Apartment, Bankim Park Extn, Gorabazar, Dum Dum, Kolkata 700028, West Bengal, India</p>
+                <p>Call: +91-9867973169</p>
+                <p>WhatsApp: +91-9867973169</p>
+                <p>Email: thepinemist@gmail.com</p>
+            </div>
+            <div id = "contactFormDiv" class = "flex-fill">
+                <h6>Submit your queries and we will get back to you.</h6>
+                <form class="row g-3 needs-validation" id = "contactForm">
+                    <div class="col-12">
+                        <label for="contactGuestName" class="form-label">Your Name <span class = "requiredField">*</span></label>
+                        <input type="text" class="form-control" id="contactGuestName"  placeholder="Your Name" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="contactGuestNumber" class="form-label">Contact Number <span class = "requiredField">*</span></label>
+                        <input type="text" class="form-control" id="contactGuestNumber" pattern="[0-9]{10}"  placeholder="Contact Number" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="contactGuestQuery" class="form-label">Tour Description <span class = "requiredField">*</span></label>
+                        <textarea class="form-control" id="contactGuestQuery" rows="3" placeholder="Tour Description" required></textarea>
+                    </div>
+                    <div id = "utilityButtons">
+                        <button type="button" class="btn btn-warning"  id = "contactSubmit">Submit</button>
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div class = "container section" id = "aboutUs">
+        <div class = "container packageHeader">
+            <h3>About Us</h3>
+        </div>
+        <div id = "aboutText">
+            <p>We offer customized tour packages for your vacation in any Himalayan region starting from Arunachal in the North-East to Kashmir in the North West.
+                Our goal is to plan and make your vacation hassel free so that you can focus on building memories. 
+            </p>
+        </div>
+    </div> 
+
+    <div class = "container" id = "pageFooter">
+
+    </div> 
+    
+    <!-- package Modals -->
+
+    <div class="modal fade" id="packageModal01">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Darjeeling</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!-- modal carousel -->
+                <div id="darjeelingCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./Pics/Carousel/carousel1.jpg" class="d-block w-100 modalCarouselImage" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>First slide label</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                      </div>
+                    <div class="carousel-item">
+                      <img src="./Pics/Carousel/carousel2.jpg" class="d-block w-100 modalCarouselImage" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>First slide label</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./Pics/Carousel/carousel3.jpg" class="d-block w-100 modalCarouselImage" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>First slide label</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#darjeelingCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#darjeelingCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                  <div>
+                    <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tabButton" data-bs-toggle="tab" data-bs-target="#packageDescription01" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Description</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link"  id="tabButton" data-bs-toggle="tab" data-bs-target="#itineary01" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Itineary</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tabButton" data-bs-toggle="tab" data-bs-target="#attractions01" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Attractions</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tabButton" data-bs-toggle="tab" data-bs-target="#policies01" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Policies</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="packageDescription01" role="tabpanel" aria-labelledby="packageDescription01" tabindex="0">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum nisi iure quidem officiis alias, totam dolorum similique sunt eius, magni magnam odit praesentium excepturi minima laudantium id est, quaerat ratione.</p>
+                      </div>
+                      <div class="tab-pane fade" id="itineary01" role="tabpanel" aria-labelledby="itineary01" tabindex="0">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas rem mollitia eum perferendis labore non ex sint illum dolores vero incidunt corporis eligendi maiores ab, nostrum reprehenderit! Consectetur, ad.</p>
+                        <div id = "itinearyDetails01">
+      
+                          <div class="card dayWiseCard">
+                            <div class="card-header itinearyDays">
+                              <i class="fa-solid fa-calendar-day"></i>
+                              <h5>Day 1</h5>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">NJP/Siliguri/Bagdogra to Darjeeling</h5>
+                              <p class="card-text">Pickup from NJP/Siliguri/Derjeeling and drop to Darjeeling. Check-in to hotel at Darjeeling. Lunch and Dinner will be served at Darjeeling Hotel.
+                                Spend the evening at Mall road and go for shopping at the local market. 
+                              </p>
+                            </div>
+                            <div class="card-footer">
+                              <i class="fa-solid fa-utensils"></i>
+                              Accomodation, Lunch and Dinner
+                            </div>
+                          </div>
+                          <br>
+                          <div class="card dayWiseCard">
+                            <div class="card-header itinearyDays">
+                              <i class="fa-solid fa-calendar-day"></i>
+                              <h5>Day 2</h5>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Darjeeling Local Sightseeing</h5>
+                              <p class="card-text">
+                                After breakfast at Hotel, our cab will pick you from Darjeeling hotel and go for Darjeeling local sightseeing. After covering some sightseeing points, you will be dropped back to hotel for lunch.
+                                Post lunch continue sightseeing of the remaining points and reach back to hotel by evening. Rest for the day. Dinner will be served at the hotel.
+                              </p>
+                            </div>
+                            <div class="card-footer">
+                              <i class="fa-solid fa-utensils"></i>
+                              Accomodation, Breakfast, Lunch and Dinner
+                            </div>
+                          </div>
+                          <br>
+                          <div class="card dayWiseCard">
+                            <div class="card-header itinearyDays">
+                              <i class="fa-solid fa-calendar-day"></i>
+                              <h5>Day 3</h5>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Darjeeling Local Sightseeing</h5>
+                              <p class="card-text">
+                                After breakfast at Hotel, our cab will pick you from Darjeeling hotel and go for Darjeeling local sightseeing. After covering some sightseeing points, you will be dropped back to hotel for lunch.
+                                Post lunch continue sightseeing of the remaining points and reach back to hotel by evening. Rest for the day. Dinner will be served at the hotel.
+                              </p>
+                            </div>
+                            <div class="card-footer">
+                              <i class="fa-solid fa-utensils"></i>
+                              Accomodation, Breakfast, Lunch and Dinner
+                            </div>
+                          </div>
+                          <br>
+                          <div class="card dayWiseCard">
+                            <div class="card-header itinearyDays">
+                              <i class="fa-solid fa-calendar-day"></i>
+                              <h5>Day 4</h5>
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Darjeeling Local Sightseeing</h5>
+                              <p class="card-text">
+                                After breakfast at Hotel, our cab will pick you from Darjeeling hotel and go towards NJP/Siliguri/Bagdogra. On the way you will visit Mirik sightseeing.
+                              </p>
+                            </div>
+                            <div class="card-footer">
+                              <i class="fa-solid fa-utensils"></i>
+                              Breakfast
+                            </div>
+                          </div>
+                          <br>      
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="attractions01" role="tabpanel" aria-labelledby="attractions01" tabindex="0">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum rerum repellat cupiditate consequuntur numquam laudantium eum minima omnis quibusdam eveniet at doloremque, dignissimos ab similique totam qui. Repudiandae, in? Sapiente!</p>
+                      </div>
+                      <div class="tab-pane fade" id="policies01" role="tabpanel" aria-labelledby="policies01" tabindex="0">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum rerum repellat cupiditate consequuntur numquam laudantium eum minima omnis quibusdam eveniet at doloremque, dignissimos ab similique totam qui. Repudiandae, in? Sapiente!</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    
+
+
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
