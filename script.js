@@ -22,12 +22,12 @@ function displayData (responseJson){
         }
 
         let feedbackContent = document.createElement("div");
-        feedbackContent.classList.add("feedbackContent","d-lg-flex","flex-lg-row",
-          "justify-content-between", "align-items-center"
+        feedbackContent.classList.add("feedbackContent","row", "g-2"
         );
         let textContent = document.createElement("div");
         textContent.classList.add("flex-fill");
         textContent.setAttribute("id", "feedbackTextContent");
+        textContent.classList.add("col-md-6", "p-2", "text-center");
 
         let guestName = document.createElement("h3");
         let userIcon = document.createElement("span");
@@ -46,20 +46,23 @@ function displayData (responseJson){
         quoteStartIcon.innerHTML = '<i class="fa-solid fa-quote-left"></i>';
         let quoteEndIcon = document.createElement("span");
         quoteEndIcon.innerHTML = '<i class="fa-solid fa-quote-right"></i>';
-        guestReview.appendChild(quoteStartIcon);
+        //guestReview.appendChild(quoteStartIcon);
         let reviewText = document.createTextNode("   "+element.GuestReview+ "   ");
         guestReview.appendChild(reviewText);
-        guestReview.appendChild(quoteEndIcon);
+        //guestReview.appendChild(quoteEndIcon);
         
 
         textContent.appendChild(guestName);
         textContent.appendChild(guestRating);
+        textContent.appendChild(quoteStartIcon);
         textContent.appendChild(guestReview);
+        textContent.appendChild(quoteEndIcon);
 
         let imageContent = document.createElement("div");
         imageContent.classList.add("flex-fill");
         imageContent.setAttribute("id", "feedbackImageContent");
-        
+        imageContent.classList.add("col-md-6", "p-2", "text-center");
+
         let img1 = document.createElement("img")
         img1.src = element.Image1;
         
