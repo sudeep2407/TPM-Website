@@ -1,9 +1,15 @@
+:root {
+    --primary: #50d412;
+    --light: #F1F8FF;
+    --dark: #0F172B;
+}
+
 html {
     /* scroll-behavior: smooth !important; */
 }
 
 body {
-    background-image: url(./Pics/background3.jpg) ;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(15, 37, 43, 0.9)), url(./Pics/background3v1.svg);
     /* background-color: #0ffde998; */
     background-repeat: no-repeat;
     background-attachment: fixed;  
@@ -40,7 +46,7 @@ body {
 
 #brandName a {
     text-decoration: none;
-    color: #94e005;
+    color: var(--primary);
     font-size: 1.8rem;
     font-family: "Lucida Handwriting";
     text-shadow: 2px 2px 3px rgb(15, 15, 15);
@@ -64,14 +70,14 @@ body {
 .searchOption{
     text-decoration: none;
     z-index: 3;
-    color: #01a701;
+    color: var(--dark);
     transition: all .3s;
     padding-left: 5px;
     border-radius: 5px;
 }
 
 .searchOption:hover {
-    background-color: #0c6d0c;
+    background-color: var(--primary);
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: bold;
@@ -87,7 +93,7 @@ body {
 }
 
 #nav a:hover {
-    color: rgb(96, 255, 202);
+    color: var(--primary);
     font-weight: bold;
 }
 
@@ -130,8 +136,6 @@ body {
 .pic-ctn {
     position: relative;
     width: 90%;
-    padding: 5%;
-    /* background-color: yellow; */
     height: 40vw;
     margin: auto;
     padding: 2%;
@@ -172,7 +176,6 @@ img:nth-child(5) {
 #sideText {
     width:90%;
     height: auto;
-    /* background-color: red; */
     padding: 2%;
     margin: auto;
 }
@@ -189,13 +192,13 @@ img:nth-child(5) {
 }
 
 #textHeader #heading2 {
-    margin-top: 6vh;
+    margin-top: 7vh;
     color: aqua;
     animation-delay: 0.5s; 
 }
 
 #textHeader #heading3 {
-    margin-top: 12vh;
+    margin-top: 14vh;
     color: bisque;
     animation-delay: 1s; 
 }
@@ -232,7 +235,7 @@ img:nth-child(5) {
 }
 
 .packageHeader h3{
-    color: beige;
+    color: var(--light);
     font-size: 2rem;
     font-family: "Lucida Handwriting";
     text-shadow: 2px 1px 3px rgb(158 158 158), 3px 3px 10px rgb(0 0 0 / 89%);
@@ -267,13 +270,23 @@ img:nth-child(5) {
     box-shadow: 0 4px 8px 0 #97ebbd33, 0 6px 20px 0 #3ae77c30;
 }
 
-.card-text {
+.card-text, .card-title {
     transition: all .5s;
 }
 
-.card:hover .card-text {
+.card:hover .card-text{
     color: rgb(75, 77, 71);
     text-shadow: 1px 1px 3px rgb(92, 92, 92);
+}
+
+.card:hover .card-title{
+    color: rgb(75, 77, 71);
+    text-shadow: 1px 1px 3px rgb(92, 92, 92);
+}
+
+
+.fa-calendar-day {
+    color: var(--primary);
 }
 
 /* Why choose us section */
@@ -290,7 +303,6 @@ img:nth-child(5) {
 
 #facilities div {
     text-align: center;
-    margin-top: 8px;
     width: 40%;
     height: auto;
     background: rgba(255, 255, 255, 0.5);
@@ -303,7 +315,7 @@ img:nth-child(5) {
 }
 
 #facilities i {
-    color: rgb(162, 243, 70);
+    color: var(--primary)
 }
 
 #facilities div:hover {
@@ -315,7 +327,6 @@ img:nth-child(5) {
 #testimonialCarousel {
     width: 100%;
     height: auto;
-    /* background-color: rgb(78, 236, 236); */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -324,32 +335,36 @@ img:nth-child(5) {
 }
 
 .feedbackContent {
-    /* background-color: red; */
-   
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
     width: 100%;
-    margin: auto;
+    margin: 1% auto;
     height: auto;
     padding:10px;
-
+    text-align: center;
 }
 
 #carouselExample {
+    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(./Pics/Carousel/carousel2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: auto;
     width: 100vw;
-    background: rgba(255, 255, 255, 0.4);
+    min-height: 55vh;
     backdrop-filter: blur(8px);
     border-radius: 10px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.272);
-    /* background-color: #a1f309; */
+    display: flex;
+    align-items: center;
 }
 
 #feedbackCarousel {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 9%;
+    padding-right: 9%;
 }
 
+
 #feedbackTextContent {
-    /* background-color: #ffde23; */
     height: auto;
     margin: auto;
     width: 50%;
@@ -359,8 +374,12 @@ img:nth-child(5) {
     text-shadow: 1px 1px 3px rgb(0, 0, 0);
 }
 
+#feedbackTextContent i {
+    color: var(--primary);
+    font-size: 2rem;
+}
+
 #feedbackImageContent {
-    /* background-color: brown; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -371,7 +390,6 @@ img:nth-child(5) {
 }
 
 #feedbackImageContent img {
-    height: 200px;
     width: 200px;    
     object-fit: contain;
     margin: 2px;
@@ -456,6 +474,11 @@ img:nth-child(5) {
     text-shadow: 1px 1px 3px rgb(34, 34, 34);
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
 /* contact us form */
 
 #contactDiv > div {
@@ -469,14 +492,12 @@ img:nth-child(5) {
     backdrop-filter: blur(8px);
     color: #ffffff;
     height: 45vh;
-    /* width: 60%; */
     margin: 10px auto;
     padding:15px;
     text-shadow: 1px 1px 3px rgb(34, 34, 34);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background-color: yellow; */
 }
 
 #addressDiv p{
@@ -488,11 +509,9 @@ img:nth-child(5) {
     backdrop-filter: blur(8px);
     color: #ffffff;
     height: 45vh;
-    /* width: 60%; */
     margin: 10px auto;
     padding:15px;
     text-shadow: 1px 1px 3px rgb(34, 34, 34);
-    /* background-color: greenyellow; */
 }
 
 .reveal{
@@ -510,7 +529,19 @@ img:nth-child(5) {
 /* site footer */
 
 #pageFooter {
-    height: 40vh;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+}
+
+#pageFooter ul {
+    list-style-type: none;
+}
+
+#pageFooter a {
+    text-decoration: none;
+    color: var(--light);
 }
 
 
@@ -531,7 +562,6 @@ img:nth-child(5) {
 }
 
 #tabButton {
-    /* border: 1px solid #b4b4b4; */
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -639,7 +669,7 @@ img:nth-child(5) {
     }
 
     #contactFormDiv {
-        height: 58vh;
+        height: auto;
     }
 
     #textContent {
@@ -648,13 +678,18 @@ img:nth-child(5) {
     }
 
     #feedbackImageContent img {
-        height: 100px;
         width: 100px;
     }
 
     #facilities div {
         width: 80%;
     }
+
+    #feedbackCarousel {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
 }
 
 
